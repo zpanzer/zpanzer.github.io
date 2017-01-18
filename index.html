@@ -3,13 +3,126 @@
 
 	<head>
 	  <meta charset="utf-8">
-	  <title>Zach's Site</title>
+	  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	  <title>Panzer - JSC Unit 9 Project</title>
+	  <!-- Google Font-->
+	  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	  <!-- Grid CSS-->
+	  <link rel="stylesheet" type="text/css" href="vendors/css/grid.min.css">
+	  <!-- Custom Stylesheet -->
+	  <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 	</head>
 
 	<body>
 
-		<h1>Hello There!</h1>
-		<h2>I have made an edit to this site.</h2>
+	<!-- Header
+	================================================== -->
+
+		<header class="hero">
+			<div class="hero__content">
+				<h1>Monk’s Cafe</h1>
+				<h4>“The Coffee Shop”</h4>
+			</div>
+			<img src="resources/img/down_arrow.svg" alt="Down Arrow" class="hero__arrow">
+		</header>
+
+	<!-- Reservations
+	================================================== -->
+
+		<section class="reservations">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5">
+						<div class="reservations__make-reservation">
+							<h3 class="reservations__headline">Make a Reservation</h3>
+							<form id="reservations__form">
+		    					<input id="reservations__make-reservation__form--name" type="text" placeholder="Enter Your Name">
+		    					<input id="reservations__make-reservation__form--day" type="text" placeholder="Enter Your Day">
+		    					<button type="submit" class="reservations__make-reservation__btn">Confirm Reservation</button>
+							</form><!-- end form-->
+						</div>
+						<img src="resources/img/pexels-photo-coffee-2.jpg" alt="Coffee Image" class="reservations__make-reservation__image">	
+					</div><!-- end col-->
+
+					<div class="col-sm-7">
+							<img src="resources/img/pexels-photo-coffee-1.jpg" alt="Coffee Image" class="reservations__image">
+						<div class="reservations__existing">
+							<h3>Existing Reservations</h3>
+							<table id="reservations__table">
+								<tr>
+									<th>Name</th>
+									<th>Day</th>
+								</tr>
+								<tr id="reservations__table__row">
+									<td id="reservations__table__row--name"> [ form data will publish here ] </td>
+									<td id="reservations__table__row--day"> [ form data will publish here ] </td>
+								</tr>
+							</table>
+						</div><!-- end reservations__existing-->
+					</div><!-- end col-->
+				</div><!-- end row-->	
+			</div><!-- end Container-->
+		</section><!-- end reservations section-->
+
+	<!-- Reviews
+	================================================== -->
+
+		<section class="reviews">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<img src="resources/img/pexels-photo-coffee-3.jpg" alt="" class="reviews__image--left">
+					</div><!-- end col-->
+					
+					<div class="col-sm-8">
+					<img src="resources/img/pexels-photo-coffee-4.jpg" alt="" class="reviews__image--right">
+						<div class="reviews__quote">
+							<span class="reviews__quote--quote-mark">“</span>
+							<blockquote>In a city teeming with specialty coffee shops, Monk's Cafe is one of the few that stands a notch above the rest. Whether you’re a broker, a banker, or a tourist like us, we would make visiting this café a priority when in Pittsburgh.</blockquote>
+							<span class="reviews__quote--quote-mark">”</span>
+						</div>
+					</div><!-- end col-->
+				</div><!-- end row-->	
+			</div><!-- end Container-->
+		</section><!-- end reviews section-->
+
+	<!-- Info
+	================================================== -->
+
+		<section class="info">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6">
+						<div id="map"></div>
+					</div><!-- end col-->
+					<div class="col-sm-6">
+						<img src="resources/img/pexels-photo-coffee-5.jpg" alt="" class="info__image-top">
+						<img src="resources/img/pexels-photo-coffee-7.jpg" alt="" class="info__image-bottom">
+					</div><!-- end col-->
+				</div><!-- end row-->
+			</div><!-- end Container-->
+		</section><!-- end cta section-->
+
+	<!-- Cta
+	================================================== -->
+
+		<section class="cta">
+			<div class="cta__background">
+				<h2 class="cta__headline">Come Dine with Us</h2>
+			</div>
+		</section>
+
+
+	<!-- Scripts
+	================================================== -->	
+
+	<!-- jQuery Script -->
+	<script src="vendors/js/jquery-3.0.0.js"></script>
+	<!-- Main js file -->
+  	<script src="resources/js/script.js"></script>
+  	<!-- google maps -->
+     <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLS6GEBG4QnNbNbGo83CKYYevD0DUSBTo&callback=initMap"></script>
 
 	</body>
 </html>
