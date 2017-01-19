@@ -4,7 +4,7 @@
 	<head>
 	  <meta charset="utf-8">
 	  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-	  <title>Panzer - JSC Unit 9 Project</title>
+	  <title>Panzer - Final Project</title>
 	  <!-- Google Font-->
 	  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
@@ -27,6 +27,15 @@
 			<img src="resources/img/down_arrow.svg" alt="Down Arrow" class="hero__arrow">
 		</header>
 
+	<!-- About
+	================================================== -->
+
+		<section class="about">
+			
+				<h2>A community space to indulge in friendly conversation over coffee or a homemade meal.</h2>
+			
+		</section>
+
 	<!-- Reservations
 	================================================== -->
 
@@ -38,7 +47,11 @@
 							<h3 class="reservations__headline">Make a Reservation</h3>
 							<form id="reservations__form">
 		    					<input id="reservations__make-reservation__form--name" type="text" placeholder="Enter Your Name">
-		    					<input id="reservations__make-reservation__form--day" type="text" placeholder="Enter Your Day">
+		    					<select name="Select Your Day" id="reservations__make-reservation__form--day" placeholder="Select Your Day">
+    								<option value="today">Today</option>
+    								<option value="tomorrow">Tomorrow</option>
+    								<option value="The day after next">The day after next</option>
+  								</select>
 		    					<button type="submit" class="reservations__make-reservation__btn">Confirm Reservation</button>
 							</form><!-- end form-->
 						</div>
@@ -48,7 +61,7 @@
 					<div class="col-sm-7">
 							<img src="resources/img/pexels-photo-coffee-1.jpg" alt="Coffee Image" class="reservations__image">
 						<div class="reservations__existing">
-							<h3>Existing Reservations</h3>
+							<h3>Upcoming Reservations</h3>
 							<table id="reservations__table">
 								<tr>
 									<th>Name</th>
@@ -109,7 +122,7 @@
 
 		<section class="cta">
 			<div class="cta__background">
-				<h2 class="cta__headline">Come Dine with Us</h2>
+				<h5 class="cta__headline">Come Dine with Us</h5>
 			</div>
 		</section>
 
@@ -117,9 +130,11 @@
 	<!-- Scripts
 	================================================== -->	
 
-	<!-- jQuery Script -->
-	<script src="vendors/js/jquery-3.0.0.js"></script>
-	<!-- Main js file -->
+	 <!-- Firebase -->
+  	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+	<!-- jQuery -->
+  	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<!-- Custom js file -->
   	<script src="resources/js/script.js"></script>
   	<!-- google maps -->
      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLS6GEBG4QnNbNbGo83CKYYevD0DUSBTo&callback=initMap"></script>

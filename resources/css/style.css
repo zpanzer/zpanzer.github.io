@@ -58,11 +58,14 @@ h1 {
 }
 
 h2 {
-  font-family: 'Bungee Inline', cursive;
-  font-size: 17em;
-  line-height: 0.9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
   color: #d7534c;
+  line-height: 1.8;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  margin-bottom: 100px;
 }
 
 h3 {
@@ -96,6 +99,14 @@ h4 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 17em;
+  line-height: 0.9;
+  color: #d7534c;
+  text-transform: uppercase;
+}
+
 blockquote {
   font-size: 1.4em;
   color: #d7534c;
@@ -108,7 +119,8 @@ blockquote {
 
 /* ==== FORM ==== */
 
-#reservations__form input[type="text"] {
+#reservations__form input[type="text"],
+#reservations__form select {
     height: 43px;
     display: inline-block;
     width: 87%;
@@ -128,7 +140,8 @@ blockquote {
     -o-transition: all .3s linear;
 }
 
-#reservations__form input[type="text"]:focus {
+#reservations__form input[type="text"]:focus,
+#reservations__form select:focus {
     border-bottom: 2px solid #000;
     outline: 0;
 }
@@ -205,6 +218,14 @@ button, input, .reservations__make-reservation__btn {
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* ==== ABOUT ==== */
+
+.about {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
 }
 
 /* ==== RESERVATIONS ==== */
