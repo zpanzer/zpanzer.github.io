@@ -67,10 +67,13 @@
 									<th>Name</th>
 									<th>Day</th>
 								</tr>
-								<tr id="reservations__table__row">
-									<td id="reservations__table__row--name"> [ form data will publish here ] </td>
-									<td id="reservations__table__row--day"> [ form data will publish here ] </td>
+								<!-- template for reservation-list -->
+								<script id="reservation-template" type="text/x-handlebars-template">
+								<tr data-id="{{reservationId}}">
+									<td class="reservations__table__row">{{name}}</td>
+									<td class="reservations__table__row">{{day}}</td>
 								</tr>
+								</script><!-- end script-->
 							</table>
 						</div><!-- end reservations__existing-->
 					</div><!-- end col-->
@@ -134,6 +137,8 @@
   	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 	<!-- jQuery -->
   	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  	 <!-- handlebars -->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 	<!-- Custom js file -->
   	<script src="resources/js/script.js"></script>
   	<!-- google maps -->

@@ -37,7 +37,43 @@ var database = firebase.database();
       reservationsReference.push(reservationData);
   });
 
+  // retrieve reservations data when page loads and when reservations are added
+  function getReservations() {
 
+    // use reference to database to listen for changes in reservations data
+    database.ref('reservations').on('value', function (results) {
+      
+      // Get all reservations stored in the results we received back from Firebase
+      var allReservations = results.val();
+      
+      // iterate (loop) through all reservations coming from database call
+      for (var reservation in allReservations) {
+  
+      // Create an object literal with the data we'll pass to Handlebars
+      var context = {
+      name: allReservations[reservation].name,
+      day: allReservations[reservation].day,
+      reservationId: reservation 
+      };
+          
+      var source = $("#reservation-template").html();
+      var template = Handlebars.compile(source);
+      var reservationListItem = template(context);
+
+      $('#reservations__table').append(reservationListItem);
+
+      }
+
+     
+
+    // remove all list reservations from DOM before appending list reservations
+      //$('.reservations__table__row').empty(); 
+      
+   });
+  }
+
+  // When page loads, get reservations
+   getReservations();
 
 
 
