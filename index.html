@@ -46,8 +46,9 @@
 						<div class="reservations__make-reservation">
 							<h3 class="reservations__headline">Make a Reservation</h3>
 							<form id="reservations__form">
-		    					<input id="reservations__make-reservation__form--name" type="text" placeholder="Enter Your Name">
-		    					<select name="Select Your Day" id="reservations__make-reservation__form--day" placeholder="Select Your Day">
+		    					<input id="reservations__make-reservation__form--name" type="text" placeholder="Enter Your Name*" required>
+		    					<select name="Select Your Day" id="reservations__make-reservation__form--day" placeholder="Select Your Day" required>
+		    						<option selected="selected">Select Your Day*</option>
     								<option value="today">Today</option>
     								<option value="tomorrow">Tomorrow</option>
     								<option value="The day after next">The day after next</option>
@@ -123,10 +124,8 @@
 	<!-- Cta
 	================================================== -->
 
-		<section class="cta">
-			<div class="cta__background">
-				<h5 class="cta__headline">Come Dine with Us</h5>
-			</div>
+		<section id="instafeed">
+			<h5 class="cta__headline">Come Dine with Us</h5>
 		</section>
 
 
@@ -139,6 +138,8 @@
   	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   	 <!-- handlebars -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  	<!-- Instafeed -->
+  	<script src="vendors/js/instafeed.min.js"></script>
 	<!-- Custom js file -->
   	<script src="resources/js/script.js"></script>
   	<!-- google maps -->

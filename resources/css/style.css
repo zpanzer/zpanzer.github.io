@@ -356,5 +356,26 @@ button, input, .reservations__make-reservation__btn {
   top: -90px;
 }
 
+#instafeed {
+    height: 100vh;
+    position: relative;
+    margin-top: 75px;
+}
+
+#instafeed a {
+  width: 16.6667%;
+  padding-bottom: 15%;
+  display: inline-block;
+  background: center center;
+  background-repeat:  no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 39.9375em) {
+  #instafeed a { width: 50%; padding-bottom: 50%;}  
+  #instafeed a:nth-child(n+3) {display: none;}  
+  
+}
+
 
 

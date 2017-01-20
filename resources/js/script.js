@@ -1,4 +1,4 @@
-// Initialize Firebase
+// Initialize Firebase -------------------------------------------------------------------------------- 
   var config = {
     apiKey: "AIzaSyC8q49U5af7z7TZIu-VZDm9aPqJxi1AubI",
     authDomain: "reservation-site-8bb10.firebaseapp.com",
@@ -64,8 +64,6 @@ var database = firebase.database();
 
       }
 
-     
-
     // remove all list reservations from DOM before appending list reservations
       //$('.reservations__table__row').empty(); 
       
@@ -78,13 +76,23 @@ var database = firebase.database();
 
 
 
+// Instagram feed -------------------------------------------------------------------------------- 
+
+  var feed = new Instafeed({
+        get: 'user',
+        userId: '3847343',
+        accessToken: '3847343.055a8e6.dfaf1cc7c01b487ca6a3fd901f817b9e',
+        template: '<a href="{{link}}" target="_blank" style="background-image: url({{image}});">&nbsp;</a>',
+        resolution: 'standard_resolution',
+        limit: '18'
+    });
+
+  //run Instagram feed
+    feed.run();
 
 
 
-
-
-
-// Google Maps
+// Google Maps -------------------------------------------------------------------------------- 
 
 function initMap() {
 
