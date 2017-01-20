@@ -29,12 +29,26 @@ var database = firebase.database();
 
        //in its corresponding event handler define a property day on your reservationData object that will have a //value of the clicked on element's text.
       reservationData.day = $('#reservations__make-reservation__form--day').val();
+
+      //Form validation
+
+      if (reservationData.name == "") {
+        $("#reservations__make-reservation__form--name").after('<p class="error-name">This field is required.</p>');
+      }
+
+      else if (reservationData.day == "selected") {
+        $("#reservations__make-reservation__form--day").after('<p class="error-day">This field is required.</p>');
+      }
+
+      else {
     
       //Create a section for reservations data in your database
       var reservationsReference = database.ref('reservations');
     
       //POST reservationData object to your Firebase database using Firebase's .push() method.
       reservationsReference.push(reservationData);
+
+      }
   });
 
   // retrieve reservations data when page loads and when reservations are added
@@ -72,6 +86,10 @@ var database = firebase.database();
 
   // When page loads, get reservations
    getReservations();
+
+
+// FORM VALIDATION -------------------------------------------------------------------------------- 
+
 
 
 

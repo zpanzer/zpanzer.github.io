@@ -150,7 +150,6 @@ blockquote {
     line-height: 45px;
     padding-left: 15px;
     letter-spacing: 1px;
-    margin: 0 0 50px 0;
     border-radius: 0;
     border-style: none;
     border-bottom: 2px solid #d7534c;
@@ -160,6 +159,11 @@ blockquote {
     -moz-transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
+}
+
+#reservations__form select {
+    margin: 50px 0 0 0;
+
 }
 
 #reservations__form input[type="text"]:focus,
@@ -198,7 +202,7 @@ button, input, .reservations__make-reservation__btn {
     font-size: 1em;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-top: 30px;
+    margin-top: 75px;
     padding: 20px 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -215,6 +219,17 @@ button, input, .reservations__make-reservation__btn {
 
 #reservations__form .reservations__make-reservation__btn:focus {
   outline: none;
+}
+
+.error-name,
+.error-day {
+  width: 87%;
+  font-size: 0.7em;
+  color: #fefcf6;
+  background-color: #d7534c;
+  padding: 10px;
+  margin: 0 auto;
+
 }
 
 

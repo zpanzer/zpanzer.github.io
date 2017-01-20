@@ -47,13 +47,15 @@
 						<div class="reservations__make-reservation">
 							<h3 class="reservations__headline">Make a Reservation</h3>
 							<form id="reservations__form">
-		    					<input id="reservations__make-reservation__form--name" type="text" placeholder="Enter Your Name*" required>
-		    					<select name="Select Your Day" id="reservations__make-reservation__form--day" placeholder="Select Your Day" required>
-		    						<option selected="selected">Select Your Day*</option>
+		    					<input id="reservations__make-reservation__form--name" type="text" placeholder="Enter Your Name*">
+		    					
+		    					<select name="Select Your Day" id="reservations__make-reservation__form--day" placeholder="Select Your Day">
+		    						<option value ="selected" selected>Select Your Day*</option>
     								<option value="today">Today</option>
     								<option value="tomorrow">Tomorrow</option>
     								<option value="The day after next">The day after next</option>
   								</select>
+  								
 		    					<button type="submit" class="reservations__make-reservation__btn">Confirm Reservation</button>
 							</form><!-- end form-->
 						</div>
