@@ -13,10 +13,10 @@ html, body {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px; /* Base Type Size */
-	font-weight: 400;
-	line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; /* Base Type Size */
+  font-weight: 400;
+  line-height: 1.5;
   color: #303030;
   background: #fefcf6;
 }
@@ -88,7 +88,9 @@ h3:after {
   left: 50%;
   width: 100px;
   position: absolute;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 h4 {
@@ -107,13 +109,33 @@ h5 {
   text-transform: uppercase;
 }
 
+h6 {
+  font-size: 0.8em;
+  line-height: 0.9;
+  color: #d7534c;
+  text-transform: uppercase;
+}
+
+p, a {
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: #3a2f23;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+a:hover {
+  color: #d7534c;
+}
+
 blockquote {
   font-size: 1.4em;
   color: #d7534c;
   letter-spacing: 1px;
-  line-height: 1.8;
+  line-height: 1.5;
   margin-top: -40px;
   text-align: left;
+  text-transform: uppercase;
 }
 
 
@@ -146,7 +168,15 @@ blockquote {
     outline: 0;
 }
 
-#reservations__form input[type="text"]::placeholder {
+#reservations__form input[type="text"]::-webkit-input-placeholder {
+    color: #d7534c;
+}
+
+#reservations__form input[type="text"]::-moz-placeholder {
+    color: #d7534c;
+}
+
+#reservations__form input[type="text"]:-ms-input-placeholder {
     color: #d7534c;
 }
 
@@ -208,7 +238,9 @@ button, input, .reservations__make-reservation__btn {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .hero__arrow {
@@ -217,7 +249,9 @@ button, input, .reservations__make-reservation__btn {
   position: absolute;
   bottom: -50px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 /* ==== ABOUT ==== */
@@ -329,6 +363,10 @@ button, input, .reservations__make-reservation__btn {
   margin-top: 100px;
 }
 
+.info__content {
+  margin-top: 25px;
+}
+
 .info__image-top {
   width: 100%;
   height: auto;
@@ -342,14 +380,6 @@ button, input, .reservations__make-reservation__btn {
 
 /* ==== CTA ==== */
 
-.cta {
-    height: 100vh;
-    background: url(img/pexels-photo-coffee-6.jpg);
-    background-size: cover;
-    position: relative;
-    margin-top: 75px;
-}
-
 .cta__headline {
   position: absolute;
   margin: 0;
@@ -357,7 +387,7 @@ button, input, .reservations__make-reservation__btn {
 }
 
 #instafeed {
-    height: 100vh;
+    height: 100%;
     position: relative;
     margin-top: 75px;
 }
@@ -369,6 +399,39 @@ button, input, .reservations__make-reservation__btn {
   background: center center;
   background-repeat:  no-repeat;
   background-size: cover;
+}
+
+.cta__hours {
+  background: #fefcf6;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  padding: 50px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.cta__hours__content {
+  background: #fefcf6;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  border-radius: 50%;
+  border: 2px solid #d7534c;
+
+}
+
+.cta__hours__content__status--open,
+.cta__hours__content__status--closed {
+  color: #d7534c;
+  font-family: 'Lily Script One', cursive;
+  font-size: 2em;
+  text-transform: none;
+  display: none;
 }
 
 @media screen and (max-width: 39.9375em) {

@@ -148,3 +148,20 @@ function initMap() {
 
 
 } // end Google Map
+
+
+
+
+// OPEN AND CLOSED -------------------------------------------------------------------------------- 
+
+var d = new Date();
+if(d.getHours() >= 6 && d.getHours() <= 22 ){
+    $(".cta__hours__content__status--open").show();
+    $(".cta__hours__content__status--closed").hide();
+}
+else {  
+     $(".cta__hours__content__status--closed").show();
+    $(".cta__hours__content__status--open").hide();
+}
+
+

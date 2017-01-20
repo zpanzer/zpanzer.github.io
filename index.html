@@ -5,9 +5,10 @@
 	  <meta charset="utf-8">
 	  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 	  <title>Panzer - Final Project</title>
-	  <!-- Google Font-->
+	  <!-- Google Fonts-->
 	  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Lily+Script+One" rel="stylesheet">
 	  <!-- Grid CSS-->
 	  <link rel="stylesheet" type="text/css" href="vendors/css/grid.min.css">
 	  <!-- Custom Stylesheet -->
@@ -112,6 +113,18 @@
 				<div class="row">
 					<div class="col-sm-6">
 						<div id="map"></div>
+						<div class="info__content">
+							<div class="col-xs-6">
+							<h6>ADDRESS</h6>
+								<p>1234 Federal Street<br>
+								Pittsburgh, Pa 15201</p>
+							</div>
+							<div class="col-xs-6">
+								<h6>CONTACT US</h6>
+								<p>412-123-4567<br>
+								<a href="#">info@monkscafe.com</a></p>
+							</div>
+						</div>
 					</div><!-- end col-->
 					<div class="col-sm-6">
 						<img src="resources/img/pexels-photo-coffee-5.jpg" alt="" class="info__image-top">
@@ -124,8 +137,17 @@
 	<!-- Cta
 	================================================== -->
 
-		<section id="instafeed">
+		<section id="instafeed" class="cta">
 			<h5 class="cta__headline">Come Dine with Us</h5>
+			<div class="cta__hours">
+				<div class="cta__hours__content">
+					<h6>HOURS</h6>
+					<p>ALL DAYS</p>
+					<p>6AM to 10PM</p>
+					<div class="cta__hours__content__status--open">Open</div>
+					<div class="cta__hours__content__status--closed">CLosed</div>
+				</div>
+			</div>
 		</section>
 
 
@@ -136,6 +158,8 @@
   	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 	<!-- jQuery -->
   	<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<!-- Get Date Script -->
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
   	 <!-- handlebars -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   	<!-- Instafeed -->
